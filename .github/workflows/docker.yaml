@@ -12,8 +12,8 @@ jobs:
 
     - name: Build the Test Docker image
       run: |
-        echo $CR_PAT | docker login ghcr.io -u Richard-Fowles-NTT --password-stdin
-        docker build --file ./sample-packages/docker/Dockerfile -t ghcr.io/Richard-Fowles-NTT/test_publish:latest .
+        echo $CR_PAT | docker login ghcr.io -u richard-fowles-ntt --password-stdin
+        docker build --file ./sample-packages/docker/Dockerfile -t ghcr.io/richard-fowles-ntt/test_publish:latest .
         docker push ghcr.io/Richard-Fowles-NTT/test_publish:latest
       env:
         CR_PAT: ${{ secrets.CR_PAT }}
