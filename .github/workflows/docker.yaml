@@ -3,6 +3,8 @@ name: publish
 on:
   workflow_dispatch:
 
+  repository_dispatch:
+
 jobs:
   publish-hello-world-image:
     runs-on: ubuntu-latest
